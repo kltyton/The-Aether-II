@@ -174,34 +174,34 @@ public class AetherIIClientEventListeners {
     }
 
     public static void onComputeFogColor(ViewportEvent.ComputeFogColor event) {
-        Camera camera = event.getCamera();
-        float red = event.getRed();
-        float green = event.getGreen();
-        float blue = event.getBlue();
-        double partialTick = event.getPartialTick();
-
-        Triple<Float, Float, Float> renderFogColors = RenderHooks.adjustHeightBasedFogColors(camera, red, green, blue);
-        if (renderFogColors != null) {
-            red = renderFogColors.getLeft();
-            green = renderFogColors.getMiddle();
-            blue = renderFogColors.getRight();
-        }
-        Triple<Float, Float, Float> adjustWeatherFogColors = RenderHooks.adjustWeatherFogColors(camera, red, green, blue, partialTick);
-        if (adjustWeatherFogColors != null) {
-            red = adjustWeatherFogColors.getLeft();
-            green = adjustWeatherFogColors.getMiddle();
-            blue = adjustWeatherFogColors.getRight();
-        }
-
-        if (event.getRed() != red) {
-            event.setRed(red);
-        }
-        if (event.getGreen() != green) {
-            event.setGreen(green);
-        }
-        if (event.getBlue() != blue) {
-            event.setBlue(blue);
-        }
+//        Camera camera = event.getCamera();
+//        float red = event.getRed();
+//        float green = event.getGreen();
+//        float blue = event.getBlue();
+//        double partialTick = event.getPartialTick();
+//
+//        Triple<Float, Float, Float> renderFogColors = RenderHooks.adjustHeightBasedFogColors(camera, red, green, blue);
+//        if (renderFogColors != null) {
+//            red = renderFogColors.getLeft();
+//            green = renderFogColors.getMiddle();
+//            blue = renderFogColors.getRight();
+//        }
+//        Triple<Float, Float, Float> adjustWeatherFogColors = RenderHooks.adjustWeatherFogColors(camera, red, green, blue, partialTick);
+//        if (adjustWeatherFogColors != null) {
+//            red = adjustWeatherFogColors.getLeft();
+//            green = adjustWeatherFogColors.getMiddle();
+//            blue = adjustWeatherFogColors.getRight();
+//        }
+//
+//        if (event.getRed() != red) {
+//            event.setRed(red);
+//        }
+//        if (event.getGreen() != green) {
+//            event.setGreen(green);
+//        }
+//        if (event.getBlue() != blue) {
+//            event.setBlue(blue);
+//        }
     }
 
     public static void onPlaySound(PlaySoundEvent event) {

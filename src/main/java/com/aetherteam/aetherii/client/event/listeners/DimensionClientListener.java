@@ -1,5 +1,6 @@
 package com.aetherteam.aetherii.client.event.listeners;
 
+import com.aetherteam.aetherii.AetherII;
 import com.aetherteam.aetherii.AetherIITags;
 import com.aetherteam.aetherii.client.renderer.level.HolyIslesSkyboxRenderer;
 import com.aetherteam.aetherii.data.resources.registries.AetherIIDimensions;
@@ -70,18 +71,23 @@ public class DimensionClientListener {
     }
 
     public static void onFogColorComputed(ViewportEvent.ComputeFogColor event) {
-        Camera camera = event.getCamera();
-        DeltaTracker deltaTracker = DeltaTracker.ONE;
-        float f = deltaTracker.getGameTimeDeltaPartialTick(false);
+//        float timeOfDay = 23757;
+//        int j = new HolyIslesSkyboxRenderer().getSunriseOrSunsetColor(timeOfDay / 24000); //Modifies the sunrise/sunset fog colors to use the Aether's sunrise/sunset fog colors
+//        AetherII.LOGGER.info(String.valueOf(j));
 
-        if (camera.entity().level() instanceof ClientLevel clientLevel) {
-            if (clientLevel.dimensionTypeRegistration().is(AetherIIDimensions.AETHER_HOLY_ISLES_DIMENSION_TYPE)) {
-                int i = getBaseFogColor(clientLevel, camera, event.getRenderer().getMinecraft().options.getEffectiveRenderDistance(), f);
-                event.setRed(ARGB.redFloat(i));
-                event.setGreen(ARGB.greenFloat(i));
-                event.setBlue(ARGB.blueFloat(i));
-            }
-        }
+
+//        Camera camera = event.getCamera();
+//        DeltaTracker deltaTracker = DeltaTracker.ONE;
+//        float f = deltaTracker.getGameTimeDeltaPartialTick(false);
+//
+//        if (camera.entity().level() instanceof ClientLevel clientLevel) {
+//            if (clientLevel.dimensionTypeRegistration().is(AetherIIDimensions.AETHER_HOLY_ISLES_DIMENSION_TYPE)) {
+//                int i = getBaseFogColor(clientLevel, camera, event.getRenderer().getMinecraft().options.getEffectiveRenderDistance(), f);
+//                event.setRed(ARGB.redFloat(i));
+//                event.setGreen(ARGB.greenFloat(i));
+//                event.setBlue(ARGB.blueFloat(i));
+//            }
+//        }
     }
 
     /**

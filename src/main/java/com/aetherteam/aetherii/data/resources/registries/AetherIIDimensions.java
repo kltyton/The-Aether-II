@@ -1,6 +1,7 @@
 package com.aetherteam.aetherii.data.resources.registries;
 
 import com.aetherteam.aetherii.AetherII;
+import com.aetherteam.aetherii.AetherIITags;
 import com.aetherteam.aetherii.client.renderer.AetherIIDimensionRenderers;
 import com.aetherteam.aetherii.data.resources.builders.worldgen.holyisles.HolyIslesBiomeSourceBuilders;
 import net.minecraft.core.HolderGetter;
@@ -68,7 +69,7 @@ public class AetherIIDimensions {
                         .set(NeoForgeEnvironmentAttributes.CUSTOM_CLOUDS, AetherIIDimensionRenderers.HOLY_ISLES_CLOUDS_ID)
                         .set(EnvironmentAttributes.AMBIENT_LIGHT_COLOR, -16119286)
                         .build(),
-                timelines.getOrThrow(TimelineTags.IN_OVERWORLD),
+                timelines.getOrThrow(AetherIITags.Timelines.IN_HOLY_ISLES),
                 Optional.of(clocks.getOrThrow(WorldClocks.OVERWORLD))));
     }
 
